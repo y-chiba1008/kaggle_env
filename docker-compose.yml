@@ -1,0 +1,11 @@
+name: kaggle
+services:
+  kaggle:
+    build: .
+    volumes:
+      - ./volumes:/kaggle
+    working_dir: /kaggle/working
+    ports:
+      - 8888:8888
+    tty: true
+    command: /bin/bash
